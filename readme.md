@@ -1,8 +1,8 @@
 # DeadPress
-Contributors: portfola
-Requires at least: 3.0
-Stable tag: 1.0
-Tested up to: 4.7
+Contributors: portfola  
+Requires at least: 3.0  
+Stable tag: 1.0  
+Tested up to: 4.7  
 
 A plugin for Deadheads who use WordPress. Like WordPress, the Grateful Dead represent openness, freedom and creativity.
 
