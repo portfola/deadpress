@@ -4,7 +4,13 @@
  * Description: A plugin for Deadheads who use WordPress. Like WordPress, the Grateful Dead represent openness, freedom and creativity.
  * Author: Rindy Portfolio
  * Version: 1.0
+ * Tested up to: 4.7
+ * Stable tag: trunk
+ * Tags: admin, plugin, dashboard, login, art, music, gratefuldead
  * Author URI: http://rindyportfolio.com/
+ * License: GPLv2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ *
  */
 
 // Add CSS

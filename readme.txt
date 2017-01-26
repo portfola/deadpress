@@ -1,4 +1,4 @@
-# DeadPress
+=== DeadPress ===
 Contributors: portfola
 Requires at least: 3.0
 Tags: admin, plugin, dashboard, login, art, music, gratefuldead
@@ -8,8 +8,8 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 A plugin for Deadheads who use WordPress. Like WordPress, the Grateful Dead represent openness, freedom and creativity.
-
-## Description
+ 
+== Description ==
 
 Adds some very kind Grateful Dead touches to your WP login and Dashboard areas.
 
