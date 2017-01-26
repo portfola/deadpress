@@ -17,18 +17,18 @@ Current features include:
 * WP Stealie image for your login screen
 * Dashboard widget listing Grateful Dead shows played on today's date from Archive.org
 
-== Installation ==
+## Installation
 
 1. Upload the plugin files to the `/wp-content/plugins/deadpress` directory, or install the plugin through the WordPress plugins screen directly.
 1. Activate the plugin through the 'Plugins' screen in WordPress
 1. Enjoy!
 
-== Screenshots ==
+## Screenshots
 
 1. The DeadPress login screen
 1. DeadPress Dashboard Widget - Today in Grateful Dead History
 
-== Changelog ==
+## Changelog
 
-= 1.0 =
+### 1.0
 * New plugin
