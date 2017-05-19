@@ -4,7 +4,7 @@
  * Description: A plugin for Deadheads who use WordPress. Like WordPress, the Grateful Dead represent openness, freedom and creativity.
  * Author: Rindy Portfolio
  * Version: 1.0
- * Tested up to: 4.7
+ * Tested up to: 4.7.2
  * Stable tag: trunk
  * Tags: admin, plugin, dashboard, login, art, music, gratefuldead
  * Author URI: http://rindyportfolio.com/
@@ -51,7 +51,7 @@ function deadnews_content() {
     }
 
     if ( !$rss->get_item_quantity() ) {
-         echo '<p>Apparently, there are no updates to show!</p>';
+         echo '<p>Apparently, no shows can be found!</p>';
          $rss->__destruct();
          unset($rss);
          return;
@@ -78,6 +78,59 @@ function deadnews_content() {
 
     echo "</ul>\n";
     echo '<p><a href="https://archive.org/search.php?query=collection:GratefulDead%20AND%20title:%22-' . $month . '-' . $day . '%22&sort=-date" target="_blank">See full list of shows from this day at Archive.org</a></p>';
+    $rss->__destruct();
+    unset($rss);
+}
+
+// Add Grateful Dead 50 Years Ago dashboard widget
+function deadfifty() {
+    add_meta_box( 'deadfifty', '50 Years Ago in Grateful Dead History &#x1f339', 'deadfifty_content', 'dashboard', 'side', 'high' );
+}
+add_action( 'wp_dashboard_setup', 'deadfifty' );
+
+function deadfifty_content() {
+    $month = date('m');
+    $month_name = date('M');
+    $year = date('Y')-50;
+    $rss = fetch_feed( "https://archive.org/advancedsearch.php?q=collection%3AGratefulDead+AND+title%3A%22-" . $year . "-" . $month . "%22&fl%5B%5D=identifier&sort%5B%5D=avg_rating+desc&sort%5B%5D=&sort%5B%5D=&rows=50&page=1&callback=callback&save=yes&output=rss" );
+
+     if ( is_wp_error($rss) ) {
+          if ( is_admin() || current_user_can( 'manage_options' ) ) {
+               echo '<p>';
+               printf( __( '<strong>RSS Error</strong>: %s' ), $rss->get_error_message() );
+               echo '</p>';
+          }
+     return;
+    }
+
+    if ( !$rss->get_item_quantity() ) {
+         echo '<p>Apparently, no shows can be found!</p>';
+         $rss->__destruct();
+         unset($rss);
+         return;
+    }
+
+    echo "<ul>\n";
+
+    if ( !isset($items) )
+         $items = 5;
+
+         foreach ( $rss->get_items( 0, $items ) as $item ) {
+              $publisher = '';
+              $site_link = '';
+              $link = '';
+              $content = '';
+              $date = '';
+              $link = esc_url( strip_tags( $item->get_link() ) );
+              $title = esc_html( $item->get_title() );
+              $content = $item->get_content();
+              $content = wp_html_excerpt( $content, 250 ) . ' ...';
+
+             echo "<li><a target='_blank' class='rsswidget' href='$link'>$title</a>\n<div class='rssSummary'>$content</div>\n";
+    }
+
+    echo "</ul>\n";
+    echo '<p><a href="https://archive.org/search.php?query=collection:GratefulDead%20AND%20title:%22-' . $year . '-' . $month . '%22&sort=-date" target="_blank">See full list of shows from ' . $month_name . ' ' . $year . ' at Archive.org</a></p>';
     $rss->__destruct();
     unset($rss);
 }
