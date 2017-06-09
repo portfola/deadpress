@@ -3,11 +3,11 @@
  * Plugin Name: DeadPress
  * Description: A plugin for Deadheads who use WordPress. Like WordPress, the Grateful Dead represent openness, freedom and creativity.
  * Author: Rindy Portfolio
- * Version: 1.0
- * Tested up to: 4.7.2
- * Stable tag: trunk
+ * Version: 2.0
+ * Tested up to: 4.8
+ * Stable tag: 2.0
  * Tags: admin, plugin, dashboard, login, art, music, gratefuldead
- * Author URI: http://rindyportfolio.com/
+ * Author URI: http://rindyportfolio.com/deadpress
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  *
@@ -32,7 +32,7 @@ add_filter( 'login_headertitle', 'stealie_login_title' );
 
 // Add Grateful Dead News dashboard widget
 function deadnews() {
-    add_meta_box( 'deadnews', 'Today in Grateful Dead History', 'deadnews_content', 'dashboard', 'side', 'high' );
+    add_meta_box( 'deadnews', 'Today in Grateful Dead History &#x1f480', 'deadnews_content', 'dashboard', 'side', 'high' );
 }
 add_action( 'wp_dashboard_setup', 'deadnews' );
 
@@ -90,9 +90,9 @@ add_action( 'wp_dashboard_setup', 'deadfifty' );
 
 function deadfifty_content() {
     $month = date('m');
-    $month_name = date('M');
+    $month_name = date('F');
     $year = date('Y')-50;
-    $rss = fetch_feed( "https://archive.org/advancedsearch.php?q=collection%3AGratefulDead+AND+title%3A%22-" . $year . "-" . $month . "%22&fl%5B%5D=identifier&sort%5B%5D=avg_rating+desc&sort%5B%5D=&sort%5B%5D=&rows=50&page=1&callback=callback&save=yes&output=rss" );
+    $rss = fetch_feed( "https://archive.org/advancedsearch.php?q=collection%3AGratefulDead+AND+title%3A%22" . $year . "-" . $month . "%22&fl%5B%5D=identifier&sort%5B%5D=avg_rating+desc&sort%5B%5D=&sort%5B%5D=&rows=50&page=1&callback=callback&save=yes&output=rss" );
 
      if ( is_wp_error($rss) ) {
           if ( is_admin() || current_user_can( 'manage_options' ) ) {

@@ -2,8 +2,8 @@
 Contributors: portfola  
 Requires at least: 3.0  
 Tags: admin, plugin, dashboard, login, art, music, gratefuldead  
-Stable tag: 1.1  
-Tested up to: 4.7.5  
+Stable tag: 2.0  
+Tested up to: 4.8  
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html  
   
@@ -19,10 +19,10 @@ Current features include:
 * Dashboard widget listing Grateful Dead shows played on today's date from Archive.org  
 * New dashboard widget lists shows from 50 years ago
 
-Banner image by The Real Ferg  
+Banner image by The Real Ferg on flickr  
 https://www.flickr.com/photos/fergsphotos/14593191156/
 
-WP Stealie sourced from Zoooma (modified by portfola)  
+WP Stealie sourced from Zoooma on flickr (modified by portfola)  
 https://www.flickr.com/photos/zoooma/3048047979/
 
 ## Installation
@@ -34,11 +34,12 @@ https://www.flickr.com/photos/zoooma/3048047979/
 ## Screenshots
 
 1. The DeadPress login screen
-1. DeadPress Dashboard Widget - Today in Grateful Dead History
+1. Dashboard Widget - Today in Grateful Dead History &#x1f480  
+1. Dashboard Widget - 50 Years Ago in Grateful Dead History &#x1f339    
 
 ## Changelog
 
-### 1.1
+### 2.0
 * To honor the 50th anniversary Fare Thee Well concerts in 2015, I added a widget listing shows from 50 years ago. I thought it would be a fun way to listen to the history of the Dead! Check it out in your dashboard.
 
 ### 1.0
