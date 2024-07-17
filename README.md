@@ -2,8 +2,8 @@
 Contributors: portfola  
 Requires at least: 3.0  
 Tags: admin, plugin, dashboard, login, art, music, gratefuldead  
-Stable tag: 2.0  
-Tested up to: 4.8  
+Stable tag: 2.0.1  
+Tested up to: 6.5.3  
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html  
   
