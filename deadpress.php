@@ -3,11 +3,11 @@
  * Plugin Name: DeadPress
  * Description: A plugin for Deadheads who use WordPress. Like WordPress, the Grateful Dead represent openness, freedom and creativity.
  * Author: Rindy Portfolio
- * Version: 2.0
- * Tested up to: 4.8
- * Stable tag: 2.0
- * Tags: admin, plugin, dashboard, login, art, music, gratefuldead
- * Author URI: http://rindyportfolio.com/deadpress
+ * Version: 2.0.1
+ * Tested up to: 6.5.3
+ * Stable tag: 2.0.1
+ * Tags: dashboard, login, art, music, gratefuldead
+ * Author URI: https://rindyportfolio.com/deadpress
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  *
