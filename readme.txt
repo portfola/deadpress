@@ -2,8 +2,8 @@
 Contributors: portfola  
 Requires at least: 3.0  
 Tags: dashboard, login, art, music, gratefuldead  
-Stable tag: 2.0.1  
-Tested up to: 6.5.3  
+Stable tag: 2.0.2  
+Tested up to: 6.6.2  
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html  
   
@@ -38,6 +38,9 @@ https://www.flickr.com/photos/zoooma/3048047979/
 1. Dashboard Widget - 50 Years Ago in Grateful Dead History &#x1f339    
 
 == Changelog ==
+
+= 2.0.2 =
+* Updated error messages after DDOS attack on Internet Archive
 
 = 2.0.1 =
 * Updated tested with version to 6.5.3
