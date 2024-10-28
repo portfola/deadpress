@@ -36,17 +36,22 @@ function deadnews() {
 }
 add_action( 'wp_dashboard_setup', 'deadnews' );
 
+/**
+ * Output the content for the Grateful Dead Today in History dashboard widget.
+ *
+ * Function is a callback for add_meta_box for the dashboard widget.
+ *
+ * @since 1.0
+ */
 function deadnews_content() {
     $month = date('m');
     $day = date('d');
     $rss = fetch_feed( "https://archive.org/advancedsearch.php?q=collection%3AGratefulDead+AND+title%3A%22-" . $month . "-" . $day . "%22&fl%5B%5D=identifier&sort%5B%5D=avg_rating+desc&sort%5B%5D=&sort%5B%5D=&rows=50&page=1&callback=callback&save=yes&output=rss" );
 
      if ( is_wp_error($rss) ) {
-          if ( is_admin() || current_user_can( 'manage_options' ) ) {
-               echo '<p>';
-               printf( __( '<strong>RSS Error</strong>: %s' ), $rss->get_error_message() );
-               echo '</p>';
-          }
+          echo '<p>';
+          printf( __( '&#x1F6AB; <strong>Error</strong>: Bummer, signal is unclear.' ) );
+          echo '</p>';
      return;
     }
 
@@ -97,7 +102,7 @@ function deadfifty_content() {
      if ( is_wp_error($rss) ) {
           if ( is_admin() || current_user_can( 'manage_options' ) ) {
                echo '<p>';
-               printf( __( '<strong>RSS Error</strong>: %s' ), $rss->get_error_message() );
+               printf( __( '&#x1F6AB; <strong>Error</strong>: Bummer, signal is unclear.' ) );
                echo '</p>';
           }
      return;
