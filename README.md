@@ -1,11 +1,4 @@
 # DeadPress
-Contributors: portfola  
-Requires at least: 3.0  
-Tags: admin, plugin, dashboard, login, art, music, gratefuldead  
-Stable tag: 2.0.2  
-Tested up to: 6.6.2  
-License: GPLv2 or later  
-License URI: https://www.gnu.org/licenses/gpl-2.0.html  
   
 A plugin for Deadheads who use WordPress. Like WordPress, the Grateful Dead represent openness, freedom and creativity.
   
@@ -38,6 +31,12 @@ https://www.flickr.com/photos/zoooma/3048047979/
 1. Dashboard Widget - 50 Years Ago in Grateful Dead History &#x1f339    
 
 ## Changelog
+
+### 2.0.2
+* Updated error messages after DDOS attack on Internet Archive
+
+### 2.0.1
+* Updated tested with version to 6.5.3
 
 ### 2.0
 * To honor the 50th anniversary Fare Thee Well concerts in 2015, I added a widget listing shows from 50 years ago. I thought it would be a fun way to listen to the history of the Dead! Check it out in your dashboard.
