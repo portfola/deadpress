@@ -3,9 +3,9 @@
  * Plugin Name: DeadPress
  * Description: A plugin for Deadheads who use WordPress. Like WordPress, the Grateful Dead represent openness, freedom and creativity.
  * Author: Rindy Portfolio
- * Version: 2.0.2
+ * Version: 2.0.3
  * Tested up to: 6.7.1
- * Stable tag: 2.0.2
+ * Stable tag: 2.0.3
  * Tags: dashboard, login, art, music, gratefuldead
  * Author URI: https://rindyportfolio.com/deadpress
  * License: GPLv2 or later
@@ -44,8 +44,16 @@ add_action( 'wp_dashboard_setup', 'deadnews' );
  * @since 1.0
  */
 function deadnews_content() {
-    $month = date('m');
-    $day = date('d');
+    // Get the WordPress timezone setting
+    $wp_timezone = wp_timezone();
+
+    // Create a DateTime object with the current time in WordPress timezone
+    $datetime = new DateTime('now', $wp_timezone);
+
+    // Format the date to get month and day
+    $month = $datetime->format('m');
+    $day = $datetime->format('d');
+    
     $rss = fetch_feed( "https://archive.org/advancedsearch.php?q=collection%3AGratefulDead+AND+title%3A%22-" . $month . "-" . $day . "%22&fl%5B%5D=identifier&sort%5B%5D=avg_rating+desc&sort%5B%5D=&sort%5B%5D=&rows=50&page=1&callback=callback&save=yes&output=rss" );
 
      if ( is_wp_error($rss) ) {
