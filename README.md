@@ -32,6 +32,11 @@ https://www.flickr.com/photos/zoooma/3048047979/
 
 ## Changelog
 
+### 2.1
+* Date settings match timezone from WP settings
+* Remove duplicate shows from widget listings
+* Tested up to 6.8
+
 ### 2.0.2
 * Updated error messages after DDOS attack on Internet Archive
 
